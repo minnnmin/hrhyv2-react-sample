@@ -1,13 +1,15 @@
 import axios from 'axios';
 
+const FLASK_URL = process.env.REACT_APP_BACKEND_URL;
+
 export function getPhones(){
-    return axios.get('http://localhost:5000/phones')
+    return axios.get(`http://${FLASK_URL}/phones`)
 }
 
 export function addPhone(param) {
     return axios({
         method: 'post',
-        url : 'http://localhost:5000/addPhone',
+        url : `http://${FLASK_URL}/addPhone`,
         data: param
     })
 }
@@ -15,7 +17,7 @@ export function addPhone(param) {
 export function deletePhone(param) {
     return axios({
         method: 'post',
-        url : 'http://localhost:5000/deletePhone',
+        url : `http://${FLASK_URL}/deletePhone`,
         data: param
     })
 }
@@ -23,7 +25,7 @@ export function deletePhone(param) {
 export function updatePhone(param) {
     return axios({
         method: 'post',
-        url : 'http://localhost:5000/updatePhone',
+        url : `http://${FLASK_URL}/updatePhone`,
         data: param
     })
 }
