@@ -8,7 +8,7 @@ node {
      }
 
      stage('Push image') {      
-         docker.withRegistry('https://812675885124.dkr.ecr.ap-northeast-1.amazonaws.com', 'ecr:ap-northeast-1:ecr_credential') {
+         docker.withRegistry('https://812675885124.dkr.ecr.ap-northeast-1.amazonaws.com', 'ecr:ap-northeast-1:test-aws-credentials') {
              app.push("fe_${env.BUILD_NUMBER}")
              app.push("latest")
      }
