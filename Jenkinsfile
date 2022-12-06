@@ -4,7 +4,7 @@ node {
      }
 
      stage('Build image') {
-         app = docker.build("685766701737.dkr.ecr.ap-northeast-1.amazonaws.com/test")
+         app = docker.build("812675885124.dkr.ecr.ap-northeast-1.amazonaws.com/test-aws-credentials")
      }
 
      stage('Push image') {      
