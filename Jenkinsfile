@@ -20,7 +20,7 @@ node {
                         extensions: scm.extensions,
                         userRemoteConfigs: [[
                             url: 'git@github.com:dlgusrb3456/ArgoCD_fe.git',
-                            credentialsId: 'jenkins-ssh-private',
+                            credentialsId: 'test-ssh-credentials',
                         ]]
                 ])
           sshagent(credentials: ['jenkins-ssh-private']){
@@ -28,8 +28,8 @@ node {
                         #!/usr/bin/env bash
                         set +x
                         export GIT_SSH_COMMAND="ssh -oStrictHostKeyChecking=no"
-                        git config --global user.email "dlgusrb3456@naver.com"
-                        git config --global user.name "dlgusrb3456"
+                        git config --global user.email "rhkr_alswjd@naver.com"
+                        git config --global user.name "minnmin"
                         git checkout main
                         git pull
                         cd overlay/dev && kustomize edit set image 685766701737.dkr.ecr.ap-northeast-1.amazonaws.com/test:fe_${env.BUILD_NUMBER}
