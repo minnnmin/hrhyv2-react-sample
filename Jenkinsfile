@@ -19,7 +19,7 @@ node {
                         branches: [[name: '*/main' ]],
                         extensions: scm.extensions,
                         userRemoteConfigs: [[
-                            url: 'git@github.com:dlgusrb3456/ArgoCD_fe.git',
+                            url: 'git@github.com:minnnmin/hrhyv2-react-cd.git',
                             credentialsId: 'test-ssh-credentials',
                         ]]
                 ])
