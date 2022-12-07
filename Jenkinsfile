@@ -20,10 +20,10 @@ node {
                         extensions: scm.extensions,
                         userRemoteConfigs: [[
                             url: 'git@github.com:minnnmin/hrhyv2-react-cd.git',
-                            credentialsId: 'test-ssh-credentials',
+                            credentialsId: 'jenkins-ssh-credentials',
                         ]]
                 ])
-          sshagent(credentials: ['test-ssh-credentials']){
+          sshagent(credentials: ['jenkins-ssh-credentials']){
                sh("""
                         #!/usr/bin/env bash
                         set +x
